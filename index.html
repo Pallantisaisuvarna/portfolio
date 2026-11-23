@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f2eb" />
+    <meta
+      name="description"
+      content="Pallanti Sai Suvarna — Backend Developer building scalable REST APIs and machine learning services with Django and Flask."
+    />
+    <meta property="og:title" content="Pallanti Sai Suvarna — Backend Developer" />
+    <meta
+      property="og:description"
+      content="Backend developer building scalable REST APIs and machine learning services with Django and Flask."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pallanti Sai Suvarna — Backend Developer</title>
+    <script>
+      (function () {
+        var theme = 'light'
+        try {
+          var stored = localStorage.getItem('ps-portfolio-theme')
+          if (stored === 'light' || stored === 'dark') {
+            theme = stored
+          } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            theme = 'light'
+          }
+        } catch (e) {
+          /* storage blocked — fall back to light */
+        }
+        document.documentElement.dataset.theme = theme
+        var meta = document.querySelector('meta[name="theme-color"]')
+        if (meta) meta.setAttribute('content', theme === 'light' ? '#f5f2eb' : '#191b18')
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
